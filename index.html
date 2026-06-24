@@ -9,12 +9,18 @@
     />
     <meta name="theme-color" content="#110EA5E9" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sinh Hoạt Hè Khu Phố 6 & 5 – Tổng Kết 2026" />
+    <meta
+      property="og:title"
+      content="Sinh Hoạt Hè Khu Phố 6 & 5 – Tổng Kết 2026"
+    />
     <meta
       property="og:description"
       content="Nhìn lại một mùa hè sôi động, đầy ắp kỷ niệm của các em thiếu nhi Khu Phố 6 và Khu Phố 5."
     />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=1200&q=80" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=1200&q=80"
+    />
     <meta property="og:url" content="https://he-kp56.local" />
     <meta property="og:site_name" content="Hè KP5,6" />
     <title>Sinh Hoạt Hè – Khu Phố 6 & 5</title>
@@ -25,13 +31,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Splash Screen -->
     <div id="splash-screen" class="splash-screen">
-      <img src="img/Splash Screen.jpg" alt="Sinh Hoạt Hè KP5,6" class="splash-image" />
+      <img
+        src="img/Splash Screen.jpg"
+        alt="Sinh Hoạt Hè KP5,6"
+        class="splash-image"
+      />
       <div class="splash-overlay"></div>
       <div class="splash-countdown">
         <span id="countdown-timer" class="countdown-number">5</span>
@@ -39,28 +52,145 @@
       </div>
     </div>
 
+    <div class="nav-overlay" id="nav-overlay"></div>
+
     <header class="site-header" id="site-header">
       <div class="header-inner">
         <a href="#overview" class="logo">
           <span class="logo-icon">☀</span>
           <span class="logo-text">Hè <strong>KP6, 5</strong></span>
         </a>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu"><span></span><span></span><span></span></button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
         <nav class="main-nav" id="main-nav">
-          <a href="#overview" class="nav-link">Tổng quan</a>
-          <a href="#events" class="nav-link">Nhật ký</a>
-          <a href="#analytics" class="nav-link">Dữ liệu</a>
-          <a href="#hall-of-fame" class="nav-link">Bảng vàng</a>
-          <a href="#organizers" class="nav-link">Phụ trách</a>
+          <div class="nav-mobile-header">
+            <button class="nav-close" id="nav-close" aria-label="Đóng menu">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <div class="nav-profile">
+              <img
+                src="img/logo_nav.png"
+                alt="Avatar"
+                class="nav-avatar"
+                onerror="
+                  this.src =
+                    'https://api.dicebear.com/7.x/adventurer/svg?seed=Summer&backgroundColor=b6e3f4'
+                "
+              />
+              <h3 class="nav-profile-name">Mùa Hè 2026</h3>
+              <p class="nav-profile-sub">Tỏa sáng & Vươn lên</p>
+            </div>
+          </div>
+
+          <div class="nav-links-wrap">
+            <div class="nav-section-title">Chung</div>
+            <a href="#overview" class="nav-link">
+              <svg
+                class="nav-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              Tổng quan
+            </a>
+            <a href="#events" class="nav-link">
+              <svg
+                class="nav-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+              Nhật ký
+            </a>
+            <a href="#analytics" class="nav-link">
+              <svg
+                class="nav-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              Dữ liệu
+            </a>
+
+            <div class="nav-section-title">Nổi bật</div>
+            <a href="#hall-of-fame" class="nav-link">
+              <svg
+                class="nav-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              Bảng vàng
+            </a>
+            <a href="#organizers" class="nav-link">
+              <svg
+                class="nav-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              Phụ trách
+            </a>
+          </div>
         </nav>
       </div>
     </header>
-
     <main>
       <section id="overview" class="hero-section">
         <div class="hero-bg">
           <img
-            src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/714124823_122187037748924574_3633517124709656299_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1516&ctp=s2048x1516&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=RxJ7XSn_0m8Q7kNvwHX5kEM&_nc_oc=AdpZG1A-EFDM--RmMaE1oulEYdtjjeVcgIiwe4KxAT8PoATmTWIqBlxAVkAESOkhQfk&_nc_zt=23&_nc_ht=scontent.fsgn5-6.fna&_nc_gid=pSoDDVbmHe3KUyAfiGTxyA&_nc_ss=7b2a8&oh=00_Af8MDmamKrj12x0j6wryJ_i2oT86e4HgGVHF7TpHQ-PTZA&oe=6A2C29C4"
+            src="img/Bìa chính thức.jpg"
             alt="Sinh hoạt hè"
             class="hero-img"
             loading="eager"
@@ -68,7 +198,9 @@
           <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-          <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">Tổng Kết · Mùa Hè 2026</p>
+          <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">
+            Tổng Kết · Mùa Hè 2026
+          </p>
           <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
             Sinh Hoạt Hè<br />
             <span class="hero-title-accent">Khu Phố 6 & 5</span>
@@ -100,18 +232,38 @@
           <div class="section-header" data-aos="fade-up">
             <span class="section-tag">Nhật Ký Hoạt Động</span>
             <h2 class="section-title">Những Khoảnh Khắc<br />Đáng Nhớ</h2>
-            <p class="section-desc">Ghi lại từng khoảnh khắc vui vẻ, sôi nổi xuyên suốt mùa hè của các em.</p>
+            <p class="section-desc">
+              Ghi lại từng khoảnh khắc vui vẻ, sôi nổi xuyên suốt mùa hè của các
+              em.
+            </p>
           </div>
           <div class="masonry-grid">
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="0">
               <a
-                href="https://images.unsplash.com/photo-1518398046578-8cca57782e17?w=1200&q=90"
+                href="img/Kéo_co.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
                 data-title="Trò chơi dân gian – Kéo co"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?w=600&q=80"
+                  src="img/Kéo_co.jpg"
+                  alt="Trò chơi dân gian"
+                  loading="lazy"
+                />
+                <div class="masonry-caption">
+                  <span>Trò chơi dân gian – Kéo co</span>
+                </div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="0">
+              <a
+                href="img/Kéo_co1.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Trò chơi dân gian – Kéo co"
+              >
+                <img
+                  src="img/Kéo_co1.jpg"
                   alt="Trò chơi dân gian"
                   loading="lazy"
                 />
@@ -122,30 +274,64 @@
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="60">
               <a
-                href="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&q=90"
+                href="img/Sinh hoạt 8.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
-                data-title="Lớp học kỹ năng sống"
+                data-title="Lắng nghe nguyện vọng"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80"
-                  alt="Lớp học kỹ năng sống"
+                  src="img/Sinh hoạt 8.jpg"
+                  alt="Lắng nghe nguyện vọng"
                   loading="lazy"
                 />
                 <div class="masonry-caption">
-                  <span>Lớp học kỹ năng sống</span>
+                  <span>Lắng nghe nguyện vọng</span>
+                </div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="60">
+              <a
+                href="img/Sinh hoạt 7.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Lắng nghe nguyện vọng"
+              >
+                <img
+                  src="img/Sinh hoạt 7.jpg"
+                  alt="Lắng nghe nguyện vọng"
+                  loading="lazy"
+                />
+                <div class="masonry-caption">
+                  <span>Lắng nghe nguyện vọng</span>
                 </div>
               </a>
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="120">
               <a
-                href="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=90"
+                href="img/Sinh hoạt 9.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
                 data-title="Hoạt động nhóm ngoài trời"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
+                  src="img/Sinh hoạt 9.jpg"
+                  alt="Hoạt động nhóm"
+                  loading="lazy"
+                />
+                <div class="masonry-caption">
+                  <span>Hoạt động nhóm ngoài trời</span>
+                </div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="120">
+              <a
+                href="img/Sinh hoạt 4.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Hoạt động nhóm ngoài trời"
+              >
+                <img
+                  src="img/Sinh hoạt 4.jpg"
                   alt="Hoạt động nhóm"
                   loading="lazy"
                 />
@@ -156,13 +342,13 @@
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="80">
               <a
-                href="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=1200&q=90"
+                href="img/Vẽ tranh sáng tạo.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
                 data-title="Vẽ tranh sáng tạo"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80"
+                  src="img/Vẽ tranh sáng tạo.jpg"
                   alt="Vẽ tranh sáng tạo"
                   loading="lazy"
                 />
@@ -173,67 +359,157 @@
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="140">
               <a
-                href="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=1200&q=90"
+                href="img/Sinh hoạt 5.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
-                data-title="Hội thi thể thao"
+                data-title="Thể thao"
+              >
+                <img src="img/Sinh hoạt 5.jpg" alt="Thể thao" loading="lazy" />
+                <div class="masonry-caption"><span>Thể thao</span></div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="140">
+              <a
+                href="img/Sinh hoạt 10.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Thể thao"
+              >
+                <img src="img/Sinh hoạt 10.jpg" alt="Thể thao" loading="lazy" />
+                <div class="masonry-caption"><span>Thể thao</span></div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="140">
+              <a
+                href="img/Công_trình_trao_tặng.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Công trình trao tặng tập và quà cho các em có hoàn cảnh khó khăn"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80"
-                  alt="Hội thi thể thao"
+                  src="img/Công_trình_trao_tặng.jpg"
+                  alt="Công trình trao tặng tập và quà cho các em có hoàn cảnh khó khăn"
                   loading="lazy"
                 />
-                <div class="masonry-caption"><span>Hội thi thể thao</span></div>
+                <div class="masonry-caption">
+                  <span
+                    >Công trình trao tặng tập và quà cho các em có hoàn cảnh khó
+                    khăn</span
+                  >
+                </div>
               </a>
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="40">
               <a
-                href="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=90"
+                href="img/Trao_các_phần_quà.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
-                data-title="Buổi giao lưu văn nghệ"
+                data-title="Khu phố 6 Trao các phần quà cho học sinh khó khăn"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80"
-                  alt="Văn nghệ"
+                  src="img/Trao_các_phần_quà.jpg"
+                  alt="Khu phố 6 Trao các phần quà cho học sinh khó khăn"
                   loading="lazy"
                 />
                 <div class="masonry-caption">
-                  <span>Buổi giao lưu văn nghệ</span>
+                  <span>Khu phố 6 Trao các phần quà cho học sinh khó khăn</span>
                 </div>
               </a>
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="100">
               <a
-                href="https://images.unsplash.com/photo-1566232392379-afd9298e6a46?w=1200&q=90"
+                href="img/Trao_các_phần_quà1.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
-                data-title="Picnic dã ngoại cuối mùa"
+                data-title="Khu phố 6 Trao các phần quà cho học sinh khó khăn"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1566232392379-afd9298e6a46?w=600&q=80"
-                  alt="Dã ngoại"
+                  src="img/Trao_các_phần_quà1.jpg"
+                  alt="Khu phố 6 Trao các phần quà cho học sinh khó khăn"
                   loading="lazy"
                 />
                 <div class="masonry-caption">
-                  <span>Picnic dã ngoại cuối mùa</span>
+                  <span>Khu phố 6 Trao các phần quà cho học sinh khó khăn</span>
+                </div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="100">
+              <a
+                href="img/Trao_tập.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Khu phố 6 Trao tập vở cho các em có hoàn cảnh khó khăn"
+              >
+                <img
+                  src="img/Trao_tập.jpg"
+                  alt="Khu phố 6 Trao tập vở cho các em có hoàn cảnh khó khăn"
+                  loading="lazy"
+                />
+                <div class="masonry-caption">
+                  <span
+                    >Khu phố 6 Trao tập vở cho các em có hoàn cảnh khó
+                    khăn</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="100">
+              <a
+                href="img/Trao_các_phần_quà2.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Khu phố 6 Trao tập vở cho các em có hoàn cảnh khó khăn"
+              >
+                <img
+                  src="img/Trao_các_phần_quà2.jpg"
+                  alt="Khu phố 6 Trao tập vở cho các em có hoàn cảnh khó khăn"
+                  loading="lazy"
+                />
+                <div class="masonry-caption">
+                  <span
+                    >Khu phố 6 Trao tập vở cho các em có hoàn cảnh khó
+                    khăn</span
+                  >
                 </div>
               </a>
             </div>
             <div class="masonry-item" data-aos="fade-up" data-aos-delay="160">
               <a
-                href="https://images.unsplash.com/photo-1459278558918-f94278c0f022?w=1200&q=90"
+                href="img/Trao_quà.jpg"
                 class="glightbox"
                 data-gallery="he-gallery"
-                data-title="Cắm trại thiếu nhi"
+                data-title="Khu phố 6 thực hiện trao quà cho các em có hoàn cảnh khó khăn"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1459278558918-f94278c0f022?w=600&q=80"
-                  alt="Cắm trại"
+                  src="img/Trao_quà.jpg"
+                  alt="Khu phố 6 thực hiện trao quà cho các em có hoàn cảnh khó khăn"
                   loading="lazy"
                 />
                 <div class="masonry-caption">
-                  <span>Cắm trại thiếu nhi</span>
+                  <span
+                    >Khu phố 6 thực hiện trao quà cho các em có hoàn cảnh khó
+                    khăn</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="masonry-item" data-aos="fade-up" data-aos-delay="160">
+              <a
+                href="img/Trao_quà_KP6.jpg"
+                class="glightbox"
+                data-gallery="he-gallery"
+                data-title="Khu phố 6 thực hiện trao quà cho các em có hoàn cảnh khó khăn"
+              >
+                <img
+                  src="img/Trao_quà_KP6.jpg"
+                  alt="Khu phố 6 thực hiện trao quà cho các em có hoàn cảnh khó khăn"
+                  loading="lazy"
+                />
+                <div class="masonry-caption">
+                  <span
+                    >Khu phố 6 thực hiện trao quà cho các em có hoàn cảnh khó
+                    khăn</span
+                  >
                 </div>
               </a>
             </div>
@@ -365,7 +641,10 @@
           <div class="section-header" data-aos="fade-up">
             <span class="section-tag">Thống Kê</span>
             <h2 class="section-title">Dữ Liệu<br />Mùa Hè 2026</h2>
-            <p class="section-desc">Phân tích chi tiết thành phần tham gia và các hoạt động được tổ chức.</p>
+            <p class="section-desc">
+              Phân tích chi tiết thành phần tham gia và các hoạt động được tổ
+              chức.
+            </p>
           </div>
           <div class="charts-grid">
             <div class="chart-card" data-aos="fade-right" data-aos-delay="100">
@@ -378,7 +657,9 @@
             </div>
             <div class="chart-card" data-aos="fade-left" data-aos-delay="200">
               <h3 class="chart-title">Hoạt động theo tuần</h3>
-              <p class="chart-sub">Số lượng em tham gia qua từng tuần sinh hoạt</p>
+              <p class="chart-sub">
+                Số lượng em tham gia qua từng tuần sinh hoạt
+              </p>
               <div class="chart-wrap bar-chart-wrap">
                 <canvas id="barChart"></canvas>
               </div>
@@ -392,7 +673,10 @@
           <div class="section-header" data-aos="fade-up">
             <span class="section-tag">Vinh Danh</span>
             <h2 class="section-title">Bảng Vàng<br />Thiếu Nhi Xuất Sắc</h2>
-            <p class="section-desc">Các em đã thể hiện tinh thần tích cực, nỗ lực vượt trội suốt mùa hè.</p>
+            <p class="section-desc">
+              Các em đã thể hiện tinh thần tích cực, nỗ lực vượt trội suốt mùa
+              hè.
+            </p>
           </div>
           <div class="hof-carousel-wrap">
             <div class="hof-grid">
@@ -471,11 +755,18 @@
         <div class="container">
           <div class="section-header" data-aos="fade-up">
             <span class="section-tag">Ban Tổ Chức</span>
-            <h2 class="section-title">Những người Đứng Sau<br />Mùa Hè Rực Rỡ</h2>
-            <p class="section-desc">Hai Bí thư Chi đoàn đã tận tâm dẫn dắt và tổ chức toàn bộ chương trình.</p>
+            <h2 class="section-title">Người Đứng Sau<br />Mùa Hè Rực Rỡ</h2>
+            <p class="section-desc">
+              Hai Bí thư Chi đoàn đã tận tâm dẫn dắt và tổ chức toàn bộ chương
+              trình.
+            </p>
           </div>
           <div class="organizers-grid">
-            <div class="profile-card" data-aos="fade-right" data-aos-delay="100">
+            <div
+              class="profile-card"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <div class="profile-glow"></div>
               <div class="profile-avatar-wrap">
                 <a
@@ -494,7 +785,10 @@
                 <span class="profile-role">Bí thư Chi đoàn</span>
                 <h3 class="profile-name">Nguyễn Văn An</h3>
                 <p class="profile-unit">Khu Phố 5</p>
-                <p class="profile-quote">"Mỗi nụ cười của các em là phần thưởng lớn nhất của chúng tôi."</p>
+                <p class="profile-quote">
+                  "Mỗi nụ cười của các em là phần thưởng lớn nhất của chúng
+                  tôi."
+                </p>
                 <div class="profile-badges">
                   <span>📋 Kế hoạch</span>
                   <span>🎯 Điều phối</span>
@@ -505,15 +799,26 @@
             <div class="profile-card" data-aos="fade-left" data-aos-delay="200">
               <div class="profile-glow profile-glow-2"></div>
               <div class="profile-avatar-wrap">
-                <a href="img/Uyển My.jpg" class="glightbox profile-zoom" data-title="Lê Ngọc Uyển My - Bí thư KP6">
-                  <img src="img/Uyển My.jpg" alt="Bí thư KP6" class="profile-avatar" />
+                <a
+                  href="img/Uyển My.jpg"
+                  class="glightbox profile-zoom"
+                  data-title="Lê Ngọc Uyển My - Bí thư KP6"
+                >
+                  <img
+                    src="img/Uyển My.jpg"
+                    alt="Bí thư KP6"
+                    class="profile-avatar"
+                  />
                 </a>
               </div>
               <div class="profile-info">
                 <span class="profile-role">Bí thư Chi đoàn</span>
                 <h3 class="profile-name">Lê Ngọc Uyển My</h3>
                 <p class="profile-unit">Khu Phố 6</p>
-                <p class="profile-quote">"Đoàn kết, sáng tạo và yêu thương – đó là tinh thần mùa hè này."</p>
+                <p class="profile-quote">
+                  "Đoàn kết, sáng tạo và yêu thương – đó là tinh thần mùa hè
+                  này."
+                </p>
                 <div class="profile-badges">
                   <span>🎨 Sáng tạo</span>
                   <span>📣 Truyền thông</span>
@@ -528,7 +833,10 @@
 
     <footer class="site-footer-bar">
       <div class="container">
-        <p>© 2026 Sinh Hoạt Hè Khu Phố 6 & 5 · Được thực hiện bởi Nguyễn Anh Minh WITH ❤️</p>
+        <p>
+          © 2026 Sinh Hoạt Hè Khu Phố 6 & 5 · Được thực hiện bởi Nguyễn Anh Minh
+          WITH ❤️
+        </p>
       </div>
     </footer>
 
@@ -551,6 +859,6 @@
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

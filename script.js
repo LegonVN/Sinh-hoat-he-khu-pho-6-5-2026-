@@ -50,6 +50,7 @@ const header = document.getElementById("site-header");
 const backToTop = document.getElementById("backToTop");
 const navToggle = document.getElementById("nav-toggle");
 const mainNav = document.getElementById("main-nav");
+const navOverlay = document.getElementById("nav-overlay");
 
 window.addEventListener(
   "scroll",
@@ -65,16 +66,37 @@ window.addEventListener(
 navToggle.addEventListener("click", () => {
   const isOpen = mainNav.classList.toggle("open");
   navToggle.classList.toggle("open", isOpen);
+  if (navOverlay) navOverlay.classList.toggle("open", isOpen);
   document.body.style.overflow = isOpen ? "hidden" : "";
 });
+
+const navCloseBtn = document.getElementById("nav-close");
+if (navCloseBtn) {
+  navCloseBtn.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    navToggle.classList.remove("open");
+    if (navOverlay) navOverlay.classList.remove("open");
+    document.body.style.overflow = "";
+  });
+}
 
 mainNav.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     mainNav.classList.remove("open");
     navToggle.classList.remove("open");
+    if (navOverlay) navOverlay.classList.remove("open");
     document.body.style.overflow = "";
   });
 });
+
+if (navOverlay) {
+  navOverlay.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    navToggle.classList.remove("open");
+    navOverlay.classList.remove("open");
+    document.body.style.overflow = "";
+  });
+}
 
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -114,7 +136,7 @@ const ageData = {
   labels: ["6–8 tuổi", "9–11 tuổi", "12–14 tuổi", "15–17 tuổi"],
   datasets: [
     {
-      data: [28, 45, 38, 37],
+      data: [7, 3, 6, 2],
       backgroundColor: ["#BAE6FD", "#38BDF8", "#0EA5E9", "#0284C7"],
       borderWidth: 0,
       hoverOffset: 8,
@@ -158,7 +180,7 @@ const weekLabels = [
   "Tuần 7",
   "Tuần 8",
 ];
-const weekData = [20, 10, 13, 15, 20, 17, 20, 20];
+const weekData = [17, 10, 13, 15, 19, 13, 14, 19];
 
 const barGradient = barCtx.createLinearGradient(0, 0, 0, 300);
 barGradient.addColorStop(0, "#0EA5E9");
